@@ -42,6 +42,7 @@
 		C9666DAE1957185D004CD98B /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
 		C9BBAB9219B25CC10040D82F /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		DDA42A7919D9571C00B57A23 /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
+		DDA42A7B19D9614A00B57A23 /* ODPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ODPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 				C9666D91195717D3004CD98B /* MasterViewController.swift */,
 				C9666D93195717D3004CD98B /* DetailViewController.swift */,
 				DDA42A7919D9571C00B57A23 /* OrderedDictionary.swift */,
+				DDA42A7B19D9614A00B57A23 /* ODPlayground.playground */,
 				C9666D95195717D3004CD98B /* Main.storyboard */,
 				C9666D98195717D3004CD98B /* Images.xcassets */,
 				C9666D8D195717D3004CD98B /* Supporting Files */,

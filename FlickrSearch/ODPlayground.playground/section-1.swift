@@ -81,3 +81,15 @@ struct OrderedDictionary<KeyType: Hashable, ValueType> {
         return (key, value)
     }
 }
+
+var dict = OrderedDictionary<Int, String>()
+dict.insert("dog", forKey: 1, atIndex: 0)
+dict.insert("cat", forKey: 2, atIndex: 1)
+
+println("\(dict.array.description) : \(dict.dictionary.description)")
+
+var byIndex: (Int, String) = dict[0]
+println(byIndex)
+
+var byKey: String? = dict[2]
+println(byKey)

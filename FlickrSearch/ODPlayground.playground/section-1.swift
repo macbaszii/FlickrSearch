@@ -82,6 +82,23 @@ struct OrderedDictionary<KeyType: Hashable, ValueType> {
     }
 }
 
+extension OrderedDictionary: SequenceType {
+//  typealias GeneratorType = GeneratorOf<(KeyType, ValueType)>
+  
+  func generate() -> GeneratorOf<(KeyType, ValueType)> {
+    var index = 0
+    
+    return GeneratorOf {
+      if index < self.array.count {
+        let key = self.array[index++]
+        return (key, self.dictionary[key]!)
+      } else {
+        return nil
+      }
+    }
+  }
+}
+
 var dict = OrderedDictionary<Int, String>()
 dict.insert("dog", forKey: 1, atIndex: 0)
 dict.insert("cat", forKey: 2, atIndex: 1)
@@ -93,3 +110,7 @@ println(byIndex)
 
 var byKey: String? = dict[2]
 println(byKey)
+
+for (key, value) in dict {
+  println("\(key) => \(value)")
+}

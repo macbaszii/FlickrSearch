@@ -33,5 +33,14 @@ struct OrderedDictionary<KeyType: Hashable, ValueType> {
         self.dictionary[key] = value
         
         return existingValue
-    }    
+    }
+    
+    mutating func removeAtIndex(index: Int) -> (KeyType, ValueType) {
+        precondition(index < self.array.count, "Index out-of-bounds")
+        
+        let key = self.array.removeAtIndex(index)
+        let value = self.dictionary.removeValueForKey(key)!
+        
+        return (key, value)
+    }
 }
